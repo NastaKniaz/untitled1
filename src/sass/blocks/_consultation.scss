@@ -1,14 +1,24 @@
 .consultation {
   min-height: 680px;
   padding: 100px 0 108px 0;
-  background: url("../../img/bg2.jpg") center (center / cover) no-repeat;
+  background: url("../img/bg2.jpg") center (center / cover) no-repeat;
 
   &__desc {
-    width: 426px;
     margin-top: 8px;
+    width: 100%;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
+    @media screen and (max-width: 972px) {
+      margin: 8px auto 0 auto;
+      text-align: center;
+    }
+    @media screen and (max-width: 496px) {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 972px) {
+    padding-top: 80px;
   }
 
 }

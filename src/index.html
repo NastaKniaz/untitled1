@@ -6,10 +6,11 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/modern-normalize.min.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<div class="promo">
+<section class="promo">
     <div class="container">
         <header class="header">
             <a href="#" class="header__logo">
@@ -47,8 +48,9 @@
             <div class="promo__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
         </div>
     </div>
-</div>
-<div class="advantages">
+</section>
+
+<section class="advantages">
     <div class="container">
         <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
         <div class="advantages__wrapper">
@@ -71,11 +73,14 @@
             </div>
         </div>
     </div>
-</div>
-<div class="consultation">
+</section>
+
+<section class="consultation">
     <div class="container">
         <h2 class="title title_consultation">Получите бесплатную консультацию по подбору пульсометра </h2>
-        <div class="consultation__desc">Просто заполните форму заявки и мы перезвоним вам в течении 10 минут</div>
+        <div class="consultation__desc">Просто заполните форму заявки <br>
+            и мы перезвоним вам в течении 10 минут
+        </div>
         <form action="#" class="feed_form">
             <input name="name" required type="text" placeholder="Ваше имя">
             <input name="phone" required type="number" placeholder="Ваш телефон">
@@ -83,6 +88,74 @@
             <button class="button button_submit">Заказать консультацию</button>
         </form>
     </div>
-</div>
+</section>
+
+<section class="carousel">
+    <div class="container">
+        <div class="carousel__wrapper">
+            <div>
+                <img src="img/watch_1.jpg" alt="fist">
+            </div>
+            <div>
+                <img src="img/watch_2.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/watch_3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="catalog">
+    <div class="container">
+        <h2 class="title">Каталог пульсометров</h2>
+        <ul class="catalog__tabs">
+            <li class="catalog__tab catalog__tab_active ">
+                <div>Для фитнеса</div>
+            </li>
+            <li class="catalog__tab">
+                <div>для бега</div>
+            </li>
+            <li class="catalog__tab">
+                <div>для триатлона</div>
+            </li>
+        </ul>
+        <div class="catalog__content">
+            <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content">
+                        <img src="img/photo_1.jpg" alt="pulsometr" class="catalog-item__img">
+                        <div class="catalog-item__title">Пульсометр Polar FT1</div>
+                        <div class="catalog-item__desc">Для первых шагов в тренировках, основанных на сердечном ритме
+                        </div>
+                        <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+
+                    <ul class="catalog-item__list catalog-item__list_active">
+                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        <a href="#" class="catalog-item__back">НАЗАД</a>
+                    </ul>
+
+                </div>
+                <hr>
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб.</div>
+                        <div class="catalog-item__sale-price">4 500 руб.</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

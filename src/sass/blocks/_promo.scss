@@ -1,14 +1,14 @@
 .promo {
   min-height: 650px;
   padding: 22px 0 92px 0;
-  background: url("../../img/First_screen.jpg") center (center / cover) no-repeat;
+  background: url("../img/First_screen.jpg") center (center / cover) no-repeat;
   @media screen and (max-width: 768px) {
-    background: url("../../img/First_screen_tablet.jpg") center (center / cover) no-repeat;
+    background: url("../img/First_screen_tablet.jpg") center (center / cover) no-repeat;
     padding-bottom: 72px;
   }
   @media screen and (max-width: 496px) {
     min-height: 450px;
-    background: url("../../img/First_screen_mb.jpg") center (center / cover) no-repeat;
+    background: url("../img/First_screen_mb.jpg") center (center / cover) no-repeat;
   }
 
   &__wrapper {
