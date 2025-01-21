@@ -1,0 +1,52 @@
+.reviews {
+  padding-bottom: 48px;
+
+  &__wrapper {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    //justify-content: space-around;
+    column-gap: 20px;
+    @media screen and (max-width: 446px) {
+flex-wrap: wrap;
+      //margin-top: 10px;
+    }
+
+    &_img {
+      width: 169px;
+      height: 169px;
+      @media screen and (max-width: 446px) {
+        display: block;
+        margin: 0 auto;
+      }
+
+    }
+
+    &_content {
+      width: 680px;
+      @media screen and (max-width: 446px)  {
+        text-align: center;
+      }
+    }
+
+    &_title{
+      font-size: 18px;
+      font-weight: 700;
+      @media screen and (max-width: 446px) {
+        margin-top: 10px;
+
+      }
+    }
+
+    &_subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: #646464;
+    }
+    &_text {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}

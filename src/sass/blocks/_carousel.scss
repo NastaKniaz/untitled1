@@ -5,6 +5,12 @@
     position: relative;
     width: 750px;
     margin: 0 auto;
+    @media screen and (max-width: 992px) {
+      width: 600px;
+    }
+    @media screen and (max-width: 650px) {
+      width: 350px;
+    }
   }
 
   .slick-prev, .slick-next {
@@ -25,5 +31,6 @@
     right: -66px;
     left: auto;
   }
+
 }
 
