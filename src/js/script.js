@@ -55,4 +55,61 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('fast');
         });
     });
+
+    function validateForm(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            }
+        });
+    };
+
+    validateForm('#consultation-form');
+    validateForm('#order form');
+    validateForm('#consultation form');
+
+    $('input[name=phone]').mask("+48 999 999-999");
+
+    $('#consultation form').submit(function (e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: "mailer/smart.php",
+            data: $(this).serialize(),
+        })
+            .done(function () {
+                $(this).find('input').val('');
+                $('#consultation, #order').fadeOut();
+                $('.overlay, #thanks').fadeIn('fast');
+
+                $('form').trigger('reset');
+            });
+        return false;
+    });
+
+    //smooth scroll and pageup
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 1200) {
+            $('.pageup').fadeIn();
+        }
+        else {
+            $('.pageup').fadeOut();
+        }
+    })
+
+    $('a[href^="#"]').click(function () {
+        const _href = $(this).attr('href');
+        $('html,body').animate({scrollTop: $(_href).offset().top+"px"});
+    });
 });

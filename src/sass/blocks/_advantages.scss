@@ -57,6 +57,11 @@
     @media screen and (max-width: 672px) {
       margin-bottom: 30px;
     }
+  }
 
+  &__icon {
+    &_animated {
+      animation: heartbeat 1.5s ease infinite;
+    }
   }
 }

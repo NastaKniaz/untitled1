@@ -1,3 +1,4 @@
+@import "../../node_modules/animate.css/animate.css";
 .container {
   max-width: 950px;
   margin: 0 auto;
@@ -337,6 +338,9 @@ img {
     margin-bottom: 30px;
   }
 }
+.advantages__icon_animated {
+  animation: heartbeat 1.5s ease infinite;
+}
 
 .title {
   text-transform: uppercase;
@@ -391,6 +395,15 @@ img {
   .consultation {
     padding-top: 80px;
   }
+}
+.consultation .error {
+  border: 1px solid #C70101;
+}
+.consultation label.error {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-bottom: 12px;
+  border: none;
 }
 
 .feed-form {
@@ -770,6 +783,11 @@ img {
   justify-content: center;
   column-gap: 30px;
 }
+.footer iframe {
+  width: 100%;
+  height: 630px;
+  border: none;
+}
 
 .overlay {
   display: none;
@@ -788,6 +806,7 @@ img {
   min-height: 400px;
   background: #F2F2F2;
   padding: 40px 40px 40px 40px;
+  border-radius: 6px;
 }
 .overlay .modal__close {
   position: absolute;
@@ -820,6 +839,11 @@ img {
   text-align: center;
 }
 .overlay .modal_mini {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
   min-height: 142px;
 }
 @media screen and (max-width: 542px) {
@@ -829,9 +853,41 @@ img {
     padding: 20px 0;
   }
 }
+.overlay .modal .error {
+  border: 1px solid #C70101;
+}
+.overlay .modal label.error {
+  font-size: 14px;
+  margin-bottom: 12px;
+  border: none;
+}
 
 #consultation, #order, #thanks {
   display: none;
+}
+
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+.pageup img {
+  width: 100%;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
